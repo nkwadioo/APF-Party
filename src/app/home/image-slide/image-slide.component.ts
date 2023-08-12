@@ -23,6 +23,9 @@ import { AfterViewInit, Component } from '@angular/core';
             <ion-icon name="radio-button-on" class="button" id="button7"></ion-icon>
           </div> -->
         </article>
+        <div id="contain-button">
+          <input *ngFor="let slide of sliderImages" type="radio" name="slide-indicator" id="">
+        </div>
       </div>
     </section>
   `,
@@ -32,8 +35,6 @@ export class ImageSlideComponent implements AfterViewInit {
   private timeoutId: any;
 
   sliderImages: {image: string, captions: string[], classes: string[]}[] = [
-    // {image: 'assets/images/slider/event 1.png', captions: ['Hi']},
-    // {image: 'assets/images/slider/event 2.png', captions: ['Hello']},
     {
     image: 'assets/images/slider/event 3.png',
     classes: ['striped', 'bottom', 'right', 'mega'],
@@ -42,6 +43,11 @@ export class ImageSlideComponent implements AfterViewInit {
       'With one voice, we can unit',
       'All of Africa as One'
     ]},
+    {
+      image: 'assets/images/slider/event 2.png',
+      classes: ['black', 'bottom', 'center', 'mega'],
+      captions: ['Our beloved comitte 2023']},
+    // {image: 'assets/images/slider/event 2.png', captions: ['Hello']},
     // {image: 'assets/images/slider/event 4.png', captions: ['Love']},
   ];
 
@@ -55,14 +61,11 @@ export class ImageSlideComponent implements AfterViewInit {
     try {
       const images: any = document.getElementsByClassName("image-wrapper");
       if(!images || !images.length) {throw Error('No images found');}
-      // const button: any = document.getElementsByClassName("button");
+      const button: any= document.querySelectorAll("input");
     
       for (let i = 0; i < images.length; i++) {
         images[i].style = "display:none";
       }
-      // for (let i = 0; i < button.length; i++) {
-      //   button[i].className = button[i].className.replace(" active", "");
-      // }
     
       this.slider = this.slider ? this.slider + 1 : 1;
       if (this.slider > images.length) {
@@ -70,7 +73,7 @@ export class ImageSlideComponent implements AfterViewInit {
       }
     
       images[this.slider - 1].style = "display:flex";
-      // button[this.slider - 1].className += " active";
+      button[this.slider - 1].checked = true;
       this.timeoutId = setTimeout(() => this.slide(), 3000);
     }catch(error){
       if(this.timeoutId) {

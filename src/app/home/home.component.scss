@@ -1,0 +1,30 @@
+@import '/src/variables';
+
+section {
+    margin-block: $size-md;
+    display: flex;
+    gap: $size-xs;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: $size-md;
+        font-weight: $fw-semiBold;
+    }
+
+    button {
+        font-size: $size-sm;
+        font-weight: $fw-semiBold;
+        padding: .8rem;
+        color: white;
+        background-color: $red-100;
+        margin-top: $size-xs;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+}

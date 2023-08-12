@@ -1,0 +1,77 @@
+@import '/src/variables';
+
+.container {
+    margin: auto;
+    margin-inline: 2rem;
+
+    margin-bottom: 5rem;
+}
+
+.heading {
+    @include body-header;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4rem;
+
+    &::after {
+        @include underline(12%, $red-200, 11px, $size-xs);
+    }
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: self-end;
+}
+
+.title {
+    font-size: $size-sm;
+    font-weight: $fw-semiBold;
+}
+
+.date-time {
+    font-size: $size-xs;
+    font-weight: $fw-light;
+    font-style: italic;
+    color: $black-100;
+}
+
+.body { 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    p {
+        font-size: $size-sm;
+        font-weight: $fw-reguler;
+        font-family: $ff-body;
+    }
+}
+
+.footer {
+    display: flex;
+    gap: 1.2rem;
+    place-items: center;
+
+    button {
+        background-color: $yellow-300;
+        border: none;
+        padding-block: .6rem;
+        padding-inline: 2.4rem;
+        font-weight: $fw-semiBold;
+    }
+
+    span {
+        font-style: italic;
+        font-size: $size-sm;
+    }
+}
+

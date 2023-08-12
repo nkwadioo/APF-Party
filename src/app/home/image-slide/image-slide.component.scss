@@ -38,23 +38,6 @@ img {
     object-fit: contain;
     object-position: bottom center;
   }
-  
-  #contain-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .button:hover,
-  .button:focus {
-    opacity: 0.5;
-    transition: opacity ease-in-out 0.1s;
-  }
-
-  .active {
-    opacity: 0.5;
-  }
 
 .captions {
     position: absolute;
@@ -63,8 +46,16 @@ img {
         right: $size-xs;
     }
 
+    &.left {
+        left: $size-xs;
+    }
+
+    &.top {
+        top: 0;
+    }
+
     &.bottom {
-        bottom: $size-xs;
+        bottom: 0;
     }
 
     &.mega {
@@ -72,25 +63,52 @@ img {
         font-weight: $fw-semiBold;
     }
 
-    // striped, the tree subsiquent div should have transpant red, green, and yellow
-    
-    &.striped div{
+    &.midium {
+        font-size: $size-md;
+        font-weight: $fw-semiBold;
+    }
+
+    &.bottom.center {
+        inset: 0 0 unset 0;
+        margin: auto;
+    }
+
+
+    // Caption text styles
+    & > div{
         width: fit-content;
         padding: $size-xs;
     }
     &.striped div:first-child {
-        background-color: transparentize($red-300, 0.6);
+        background-color: transparentize($red-200, 0.20);
     }
 
     &.striped div:nth-child(2) {
-        background-color: transparentize($green-300, 0.6);
+        background-color: transparentize($green-100, 0.20);
     }
 
     &.striped div:last-child {
-        background-color: transparentize($yellow-300, 0.6);
+        background-color: transparentize($yellow-100, 0.20);
+    }
+
+    &.black div {
+        background-color: transparentize($black-300, .20);
+        color: white;
     }
 
 
 
 
+}
+
+#contain-button {
+    display: flex;
+    gap: $size-xs; 
+    place-content: center;
+    padding-block: $size-md; 
+
+    input {
+        height: $size-sm;
+        width: $size-sm;
+    }
 }

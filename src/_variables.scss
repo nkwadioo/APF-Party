@@ -4,10 +4,10 @@ $black-300: #201E1F;
 $green-100: #409B31;
 $green-200: #107400;
 $green-300: #1C6D4D;
-$red-200: #FF6A6A;
+$red-100: #FF6A6A;
 $red-200: #FF4040;
 $red-300: #EC3237;
-$yellow-200: #FBE72F;
+$yellow-100: #FBE72F;
 $yellow-200: #FBE72F;
 $yellow-300: #FBB52F;
 
@@ -27,56 +27,67 @@ $fw-reguler: 400;
 $fw-semiBold: 600;
 $fw-bold: 700;
 
-@mixin header() {
+@mixin header {
     font-family: $ff-body;
     font-size: $size-xxl;
     color: white;
 }
 
-@mixin body-header() {
+@mixin body-header {
     font-family: $ff-body;
     font-size: $size-xl;
-    font-weight: $fw-reguler;
+    font-weight: $fw-semiBold;
     color: black;
 }
 
-@mixin body-sub-header() {
+@mixin body-sub-header {
     font-family: $ff-body;
     font-size: $size-md;
     font-weight: $fw-semiBold;
     color: black;
 }
 
-@mixin body-sub-header-emphasis() {
+@mixin body-sub-header-emphasis {
     font-family: $ff-body;
     font-size: $size-md;
     font-weight: $fw-semiBold;
     color: $black-100;
 }
 
-@mixin body-text() {
+@mixin body-text {
     font-family: $ff-body;
     font-size: $size-md;
     font-weight: $fw-reguler;
     color: black;
 }
 
-@mixin home-intro() {
+@mixin home-intro {
     font-family: $ff-body;
     font-weight: $fw-reguler;
     font-size: $size-lg;
 }
 
-@mixin home-outro() {
+@mixin home-outro {
     font-family: $ff-enphesis;
     font-weight: $fw-bold;
     font-size: $size-lg;
 }
 
-@mixin nav() {
+@mixin nav {
     font-family: $ff-body;
     font-size: $size-sm;
     font-weight: $fw-semiBold;
     color: white;
     background-color: $black-200;
+}
+
+@mixin underline($spacers, $color: $red-200, $height: 3px, $gap: 1px) {
+    content: '';
+    position: absolute;
+    bottom: -.3rem;
+    left: $spacers;
+    right: $spacers;
+    height: $height;
+    background-color: $color;
+    bottom: -$gap;
 }

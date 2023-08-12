@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   template: `
     <app-image-slide />
+    <section class="join">
+      <p>Join us in our mission to create a just, equal, and prosperous nation for all citizens</p>
+      <button>Become A Member</button>
+    </section>
+    <app-posts />
   `,
 })
 export class HomeComponent {

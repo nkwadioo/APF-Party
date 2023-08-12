@@ -20,7 +20,7 @@ export class MenuComponent {
   @Output() menuSelected = new EventEmitter<string>();
 
   menuItems = [
-    { title: 'Home', route: '/' },
+    { title: 'Home', route: '/home' },
     { title: 'About Us', route: '/about-us ' },
     { title: 'Structure', route: '/structure' },
     { title: 'Become A Membership', route: '/membership' },
