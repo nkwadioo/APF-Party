@@ -1,0 +1,82 @@
+$black-100: #363334;
+$black-200: #262626;
+$black-300: #201E1F;
+$green-100: #409B31;
+$green-200: #107400;
+$green-300: #1C6D4D;
+$red-200: #FF6A6A;
+$red-200: #FF4040;
+$red-300: #EC3237;
+$yellow-200: #FBE72F;
+$yellow-200: #FBE72F;
+$yellow-300: #FBB52F;
+
+$ff-body: 'Kanit', sans-serif;
+$ff-enphesis: 'Kameron', serif;
+
+$size-xs: 16px;
+$size-sm: 20px;
+$size-md: 24px;
+$size-lg: 32px;
+$size-xl: 36px;
+$size-xxl: 48px;
+$size-m: 64px;
+
+$fw-light: 300;
+$fw-reguler: 400;
+$fw-semiBold: 600;
+$fw-bold: 700;
+
+@mixin header() {
+    font-family: $ff-body;
+    font-size: $size-xxl;
+    color: white;
+}
+
+@mixin body-header() {
+    font-family: $ff-body;
+    font-size: $size-xl;
+    font-weight: $fw-reguler;
+    color: black;
+}
+
+@mixin body-sub-header() {
+    font-family: $ff-body;
+    font-size: $size-md;
+    font-weight: $fw-semiBold;
+    color: black;
+}
+
+@mixin body-sub-header-emphasis() {
+    font-family: $ff-body;
+    font-size: $size-md;
+    font-weight: $fw-semiBold;
+    color: $black-100;
+}
+
+@mixin body-text() {
+    font-family: $ff-body;
+    font-size: $size-md;
+    font-weight: $fw-reguler;
+    color: black;
+}
+
+@mixin home-intro() {
+    font-family: $ff-body;
+    font-weight: $fw-reguler;
+    font-size: $size-lg;
+}
+
+@mixin home-outro() {
+    font-family: $ff-enphesis;
+    font-weight: $fw-bold;
+    font-size: $size-lg;
+}
+
+@mixin nav() {
+    font-family: $ff-body;
+    font-size: $size-sm;
+    font-weight: $fw-semiBold;
+    color: white;
+    background-color: $black-200;
+}
