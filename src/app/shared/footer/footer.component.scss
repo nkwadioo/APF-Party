@@ -1,0 +1,13 @@
+@import '/src/variables';
+
+p   {
+    background-color: $black-200;
+    font-size: $size-sm;
+    font-weight: $fw-semiBold;
+    color: white;
+    height: 115px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
