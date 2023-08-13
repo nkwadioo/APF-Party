@@ -27,11 +27,6 @@ $fw-reguler: 400;
 $fw-semiBold: 600;
 $fw-bold: 700;
 
-@mixin header {
-    font-family: $ff-body;
-    font-size: $size-xxl;
-    color: white;
-}
 
 @mixin body-header {
     font-family: $ff-body;
@@ -82,12 +77,12 @@ $fw-bold: 700;
 }
 
 @mixin underline($spacers, $color: $red-200, $height: 3px, $gap: 1px) {
-    content: '';
-    position: absolute;
-    bottom: -.3rem;
-    left: $spacers;
-    right: $spacers;
-    height: $height;
-    background-color: $color;
-    bottom: -$gap;
-}
+        content: '';
+        position: absolute;
+        bottom: -.3rem;
+        left: $spacers;
+        right: $spacers;
+        height: $height;
+        background-color: $color;
+        bottom: -$gap;
+    }
