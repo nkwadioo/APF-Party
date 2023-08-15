@@ -8,8 +8,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ImageSlideComponent } from './home/image-slide/image-slide.component';
 import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './home/posts/posts.component';
-import { AboutComponent } from './about/about/about.component';
+import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { StructureComponent } from './structure/structure.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './shared/header/header.component';
     HomeComponent,
     PostsComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    StructureComponent
   ],
   imports: [
     BrowserModule,

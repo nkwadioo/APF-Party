@@ -1,0 +1,66 @@
+@import 'src/variables';
+
+:host {
+    position: relative;
+}
+
+.container {
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    @include body-header;
+    margin-block: $size-lg;
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    @include body-text;
+    margin: 0 auto;
+    max-width: 82ch;
+    margin-bottom: $size-md;
+}
+
+h3 {
+    @include heading-decoration;
+}
+
+
+.topic {
+    li {
+        @include body-text;
+    
+    }
+    .sub-heading, p {
+        @include body-sub-header;
+    }
+
+}
+
+.outro {
+    position: relative;
+    margin: auto;
+    margin-top: calc($size-xl * 3);
+    @include home-outro;
+    text-align: center;
+    max-width: 45ch;
+    .underline {
+        max-width: 250px;
+        height: 11px;
+        display: block;
+        background-color: $red-300;
+        margin: auto;
+        margin-bottom: $size-xl;
+    }
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}

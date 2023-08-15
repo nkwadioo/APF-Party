@@ -1,0 +1,27 @@
+@import 'src/variables';
+
+.container {
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+h3 {
+    @include body-header;
+    @include heading-decoration;
+    margin-block: $size-lg;
+    
+    &:first-child {
+        margin-top: 5rem;
+    }
+}
+
+.topic {
+    li {
+        @include body-text;
+    
+    }
+    .sub-heading, p {
+        @include body-sub-header;
+    }
+
+}

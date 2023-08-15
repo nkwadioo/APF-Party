@@ -37,6 +37,13 @@ a {
     &:last-child {
         color: yellow;
         margin-left: auto;
+
+        &.active {
+            color: wheat;
+            &::after{
+               background-color: $yellow-200; 
+            } 
+        }
     }
 }
 

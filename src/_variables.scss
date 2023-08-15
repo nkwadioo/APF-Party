@@ -77,12 +77,26 @@ $fw-bold: 700;
 }
 
 @mixin underline($spacers, $color: $red-200, $height: 3px, $gap: 1px) {
+    content: '';
+    position: absolute;
+    bottom: -.3rem;
+    left: $spacers;
+    right: $spacers;
+    height: $height;
+    background-color: $color;
+    bottom: -$gap;
+}
+
+@mixin heading-decoration {
+    position: relative;
+    padding-left: calc($size-m + .5rem);
+    &::before {
         content: '';
         position: absolute;
-        bottom: -.3rem;
-        left: $spacers;
-        right: $spacers;
-        height: $height;
-        background-color: $color;
-        bottom: -$gap;
+        width: $size-xxl;
+        height: 10px;
+        background-color: $red-300;
+        left: 0;
+        top: 22px;
     }
+}
