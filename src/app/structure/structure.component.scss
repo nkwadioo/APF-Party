@@ -1,4 +1,6 @@
 @import 'src/variables';
+// @import '~swiper/swiper-bundle.min.css';
+
 
 .container {
     padding-inline: 2rem;
@@ -24,4 +26,12 @@ h3 {
         @include body-sub-header;
     }
 
+}
+
+.carousal {
+    display: flex;
+    gap: 5rem;
+    margin: 8rem 5rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }

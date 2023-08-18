@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { Swiper } from 'swiper';
+
+// Import Swiper styles
+
 
 @Component({
   selector: 'app-structure',
@@ -38,9 +42,106 @@ import { Component } from '@angular/core';
           </ol>
         </section>
       </main>
+      <!-- <section class="images">
+        <picture>
+          <img src="" alt="" srcset="">
+        </picture>
+      </section> -->
     </div>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <!-- <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div> -->
+        <div *ngFor="let member of members" class="swiper-slide">
+          <img [src]="member.image" [alt]="member.name">
+          <div class="info">
+            <h4 class="title">{{member.title}}</h4>
+            <p class="name">{{member.title}}</p>
+          </div>
+        </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- <div class="carousal swiper">
+      <div *ngFor="let member of members" class="images">
+        <img [src]="member.image" [alt]="member.name">
+        <div class="info">
+          <h4 class="title">{{member.title}}</h4>
+          <p class="name">{{member.title}}</p>
+        </div>
+      </div>
+    </div> -->
   `,
 })
-export class StructureComponent {
+export class StructureComponent implements AfterViewInit  {
+  // swiper = new Swiper(".swiper", {
+  //   effect: "cards",
+  //   loop: true,
+  //   grabCursor: true,
+  // });
+  constructor(private el: ElementRef) {
+  }
 
+  ngAfterViewInit() {
+    const images = this.el.nativeElement.querySelectorAll('.images');
+
+    images.forEach((image: HTMLDivElement , index: number) => {
+      const delay = index * 90;
+      image.classList.add('fadeInSlide');
+      image.style.animationDelay = delay + 'ms';
+    });
+
+    new Swiper('.carousal', {
+      rewind: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+
+  members = [
+    {
+      name: 'Muzi Hlengwa',
+      title: 'President',
+      image: '/assets/images/structure/president - muzi Hlengwa.png'
+    },
+    {
+      name: 'ND Dlamini',
+      title: 'Deputy President',
+      image: '/assets/images/structure/Deputy President.png'
+    },
+    {
+      name: 'Julie Allen Mbuthuma',
+      title: 'Secretary General',
+      image: '/assets/images/structure/Secretary General - Julie Allen Mbuthuma.png'
+    },
+    {
+      name: 'Morris Morena Glory',
+      title: '1st Deputy Secretary General',
+      image: '/assets/images/structure/1st Deputy Secretary General.png'
+    },
+    {
+      name: 'Dududu Maganu',
+      title: 'Natinal Treasurer',
+      image: '/assets/images/structure/National Treasurer - Dududu Maganu.png'
+    },
+    {
+      name: 'BJ Hlengwe',
+      title: 'Natinal Chairperson',
+      image: '/assets/images/structure/National Chairperson - BJ Hlengwe.png'
+    },
+  ]
+
+  
 }

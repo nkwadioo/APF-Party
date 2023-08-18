@@ -11,6 +11,7 @@ import { PostsComponent } from './home/posts/posts.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { StructureComponent } from './structure/structure.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StructureComponent } from './structure/structure.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

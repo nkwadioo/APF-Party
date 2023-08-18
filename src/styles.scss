@@ -33,10 +33,10 @@ app-root {
   /*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
+    img, picture, video, canvas, svg {
+      display: block;
+      // max-width: 100%;
+    }
   /*
     6. Remove built-in form typography styles
   */
@@ -55,3 +55,5 @@ app-root {
   #root, #__next {
     isolation: isolate;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
