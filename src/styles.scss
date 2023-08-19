@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Kanit:ital,wght@0,300;0,600;0,700;1,300;1,400&display=swap');
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'src/variables';
 // @import '~swiper/swiper.scss';
 
 app-root {
@@ -12,9 +13,13 @@ app-root {
   1. Use a more-intuitive box-sizing model.
 */
 
+body {
+  
+  font-family: $ff-body;
+  // font-size: 20px;
+}
+
 *, *::before, *::after {
-    font-family: 'Kanit', sans-serif;
-    // font-size: 20px;
     box-sizing: border-box;
   }
   /*

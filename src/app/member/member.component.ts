@@ -18,10 +18,10 @@ import { Validators, FormBuilder } from '@angular/forms';
     <p>For more information, please contact our membership office at membership@apf.org or call us at 0752568520.</p>
     <p>Join us today and be part of a movement that believes in the greatness of Africa. Together, we can make 'Africa Must Be Great Again' a reality!</p>
   </div>
-  <div class="form">
-    <fieldset>
-      <legend>Membership Registration</legend>
+  <div class="form-wrapper">
+    <!-- <fieldset> -->
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <legend>Membership Registration</legend>
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
           <input matInput placeholder="First Name" formControlName="firstName" required>
@@ -71,11 +71,11 @@ import { Validators, FormBuilder } from '@angular/forms';
         </mat-form-field>
   
   
-        <button mat-raised-button type="submit">Submit</button>
+        <button mat-raised-button type="submit">Registor Now</button>
       </form>
-    </fieldset>
+    <!-- </fieldset> -->
   </div>
-  .
+  <div class="strip"></div>
 
   `,
 })
