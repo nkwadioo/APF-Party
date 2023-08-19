@@ -12,6 +12,12 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { StructureComponent } from './structure/structure.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MemberComponent } from './member/member.component';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +29,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostsComponent,
     AboutComponent,
     HeaderComponent,
-    StructureComponent
+    StructureComponent,
+    ContactUsComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

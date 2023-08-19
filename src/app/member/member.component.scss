@@ -1,0 +1,48 @@
+@import '/src/variables';
+
+.header {
+    @include body-header;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: $size-sm;
+
+    em {
+        color: #363334;
+    }
+
+    span {
+        font-weight: $fw-reguler;
+    }
+}
+
+.info {
+    text-align: center;
+    @include body-sub-header-emphasis;
+    padding-block: $size-lg;
+    padding-inline: $size-xs;
+}
+
+.form{
+    position: relative;
+
+    fieldset {
+        border: none;
+        font-size: 1.8rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 90px;
+        top: 0;
+        border-color: $black-200;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem
+    }
+}

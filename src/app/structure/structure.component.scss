@@ -1,5 +1,4 @@
 @import 'src/variables';
-// @import '~swiper/swiper-bundle.min.css';
 
 
 .container {
@@ -8,7 +7,7 @@
 }
 
 h3 {
-    @include body-header;
+    @include body-header;  
     @include heading-decoration;
     margin-block: $size-lg;
     
