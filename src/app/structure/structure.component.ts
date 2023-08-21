@@ -1,9 +1,6 @@
 import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { Swiper } from 'swiper';
 
-// Import Swiper styles
-
-
 @Component({
   selector: 'app-structure',
   styleUrls: ['./structure.component.scss'],
@@ -52,25 +49,18 @@ import { Swiper } from 'swiper';
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <!-- <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div> -->
         <div *ngFor="let member of members" class="swiper-slide">
           <img [src]="member.image" [alt]="member.name">
           <div class="info">
             <h4 class="title">{{member.title}}</h4>
-            <p class="name">{{member.title}}</p>
+            <p class="name">{{member.name}}</p>
           </div>
         </div>
+      </div>
       <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
     <!-- <div class="carousal swiper">
       <div *ngFor="let member of members" class="images">
@@ -101,12 +91,23 @@ export class StructureComponent implements AfterViewInit  {
       image.style.animationDelay = delay + 'ms';
     });
 
-    new Swiper('.carousal', {
-      rewind: true,
+    new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
     });
   }
 
