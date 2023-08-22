@@ -8,6 +8,16 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ImageSlideComponent } from './home/image-slide/image-slide.component';
 import { HomeComponent } from './home/home.component';
 import { PostsComponent } from './home/posts/posts.component';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { StructureComponent } from './structure/structure.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MemberComponent } from './member/member.component';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +26,20 @@ import { PostsComponent } from './home/posts/posts.component';
     FooterComponent,
     ImageSlideComponent,
     HomeComponent,
-    PostsComponent
+    PostsComponent,
+    AboutComponent,
+    HeaderComponent,
+    StructureComponent,
+    ContactUsComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,29 @@
+@import 'src/variables';
+
+header {
+    font-family: $ff-body;
+    font-size: $size-xxl;
+    font-weight: $fw-semiBold;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background-color: $black-300;
+    padding-left: $size-m;
+    position: relative;
+    z-index: -1;
+    
+    span {
+        display: inline-block;
+        position: relative;
+        &::after {
+            @include underline(0%, $red-200, 10px, $size-xs);
+        }
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

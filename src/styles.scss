@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Kanit:ital,wght@0,300;0,600;0,700;1,300;1,400&display=swap');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'src/variables';
+
 
 app-root {
   max-width: 900px;
@@ -10,9 +13,17 @@ app-root {
   1. Use a more-intuitive box-sizing model.
 */
 
+.my-footer {
+  z-index: 2;
+}
+
+body {
+  
+  font-family: $ff-body;
+  // font-size: 20px;
+}
+
 *, *::before, *::after {
-    font-family: 'Kanit', sans-serif;
-    // font-size: 20px;
     box-sizing: border-box;
   }
   /*
@@ -33,10 +44,10 @@ app-root {
   /*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
+    img, picture, video, canvas, svg {
+      display: block;
+      // max-width: 100%;
+    }
   /*
     6. Remove built-in form typography styles
   */
@@ -55,3 +66,5 @@ app-root {
   #root, #__next {
     isolation: isolate;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

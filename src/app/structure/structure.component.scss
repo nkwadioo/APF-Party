@@ -1,0 +1,80 @@
+@import 'src/variables';
+@import "swiper/css/bundle";
+
+
+.container {
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+h3 {
+    @include body-header;  
+    @include heading-decoration;
+    margin-block: $size-lg;
+    
+    &:first-child {
+        margin-top: 5rem;
+    }
+}
+
+.topic {
+    li {
+        @include body-text;
+    
+    }
+    .sub-heading, p {
+        @include body-sub-header;
+    }
+
+}
+
+// .carousal {
+//     display: flex;
+//     gap: 5rem;
+//     margin: 8rem 5rem;
+//     overflow-y: auto;
+//     scroll-behavior: smooth;
+// }
+
+.swiper {
+    font-family: $ff-enphesis;
+    text-align: center;
+    margin-block: 7rem;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    // height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 425px;
+}
+
+.swiper .info {
+    font-family: $ff-enphesis;
+    font-weight: bold;
+    font-size: $size-lg !important;
+    position: relative;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     width: 1rem;
+    //     height: 3rem;
+    //     background-color: $green-100;
+    //     top: -3.5rem;
+
+    // }
+
+    .name {
+        color: $black-100;
+    }
+}
+  

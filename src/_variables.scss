@@ -27,11 +27,6 @@ $fw-reguler: 400;
 $fw-semiBold: 600;
 $fw-bold: 700;
 
-@mixin header {
-    font-family: $ff-body;
-    font-size: $size-xxl;
-    color: white;
-}
 
 @mixin body-header {
     font-family: $ff-body;
@@ -90,4 +85,18 @@ $fw-bold: 700;
     height: $height;
     background-color: $color;
     bottom: -$gap;
+}
+
+@mixin heading-decoration {
+    position: relative;
+    padding-left: calc($size-m + .5rem);
+    &::before {
+        content: '';
+        position: absolute;
+        width: $size-xxl;
+        height: 10px;
+        background-color: $red-300;
+        left: 0;
+        top: 22px;
+    }
 }
