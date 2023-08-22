@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <p>© 2022 African People First. All rights reserved</p>
+    <p class="my-footer">© 2022 African People First. All rights reserved</p>
   `,
 })
 export class FooterComponent {

@@ -1,0 +1,68 @@
+@import "swiper/css/bundle";
+@import '/src/variables';
+
+h3 {
+    @include body-header;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.swiper {
+    .swiper-slide {
+        display: grid;
+        grid-template-columns: minmax(300px, 560px) 1fr;
+        gap: 2rem;
+        a {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        span {
+            @include body-text;
+            font-weight: $fw-reguler;
+        }
+
+        & > img {
+            max-width: 500px;
+        }
+    }
+}
+
+.spliter {
+    width: 60%;
+    height: 6px;
+    background-color: $green-200;
+    margin-inline: auto;
+    margin-top: 4rem;
+}
+
+em {
+    font-family: $ff-enphesis;
+    text-align: center;
+    width: 80ch;
+    margin-top: 2rem;
+    margin-inline: auto;
+    display: block;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-top: 2rem;
+    margin-inline: auto;
+    a {
+        height: 75px;
+    }
+}

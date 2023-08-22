@@ -5,6 +5,7 @@ import { Validators, FormBuilder } from '@angular/forms';
   selector: 'app-member',
   styleUrls: ['./member.component.scss'],
   template: `
+  <app-header [title]="'Membership'"/>
   <section class="header">
     <video width="640" height="360" controls>
       <source src="/assets/videos.mp4" type="video/mp4">
@@ -54,14 +55,12 @@ import { Validators, FormBuilder } from '@angular/forms';
   
         <mat-form-field appearance="outline">
           <mat-label>Suburb</mat-label>
-          <input matInput placeholder="Suburb" formControlName="suburb" required>
-          <!-- <mat-error *ngIf="form.get('suburb')?.hasError('required')">Surname is required</mat-error> -->
+          <input matInput placeholder="Suburb" formControlName="suburb">
         </mat-form-field>
   
         <mat-form-field appearance="outline">
           <mat-label>City or Town</mat-label>
-          <input matInput placeholder="City or town" formControlName="cityOrTown" required>
-          <!-- <mat-error *ngIf="form.get('cityOrTown')?.hasError('required')">Surname is required</mat-error> -->
+          <input matInput placeholder="City or town" formControlName="cityOrTown">
         </mat-form-field>
   
         <mat-form-field appearance="outline">

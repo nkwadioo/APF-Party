@@ -5,7 +5,7 @@ import { Swiper } from 'swiper';
   selector: 'app-structure',
   styleUrls: ['./structure.component.scss'],
   template: `
-    <app-header [title]="'Structure'" />
+    <app-header title="Structure" />
 
     <div class="container">
       <main>
@@ -83,13 +83,13 @@ export class StructureComponent implements AfterViewInit  {
   }
 
   ngAfterViewInit() {
-    const images = this.el.nativeElement.querySelectorAll('.images');
+    // const images = this.el.nativeElement.querySelectorAll('.images');
 
-    images.forEach((image: HTMLDivElement , index: number) => {
-      const delay = index * 90;
-      image.classList.add('fadeInSlide');
-      image.style.animationDelay = delay + 'ms';
-    });
+    // images.forEach((image: HTMLDivElement , index: number) => {
+    //   const delay = index * 90;
+    //   image.classList.add('fadeInSlide');
+    //   image.style.animationDelay = delay + 'ms';
+    // });
 
     new Swiper('.swiper', {
       loop: true,
@@ -103,11 +103,7 @@ export class StructureComponent implements AfterViewInit  {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev",
-      // },
+      }
     });
   }
 

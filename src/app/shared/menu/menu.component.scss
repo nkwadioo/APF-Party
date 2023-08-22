@@ -39,7 +39,7 @@ a {
         margin-left: auto;
 
         &.active {
-            color: wheat;
+            color: white;
             &::after{
                background-color: $yellow-200; 
             } 

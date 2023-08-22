@@ -13,6 +13,10 @@ app-root {
   1. Use a more-intuitive box-sizing model.
 */
 
+.my-footer {
+  z-index: 2;
+}
+
 body {
   
   font-family: $ff-body;
