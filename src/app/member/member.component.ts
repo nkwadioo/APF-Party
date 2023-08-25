@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member',
@@ -22,7 +23,7 @@ import { Validators, FormBuilder } from '@angular/forms';
   <div class="form-wrapper">
     <!-- <fieldset> -->
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <legend>Membership Registration</legend>
+        <!-- <legend>Membership Registration</legend>
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
           <input matInput placeholder="First Name" formControlName="firstName" required>
@@ -67,10 +68,13 @@ import { Validators, FormBuilder } from '@angular/forms';
           <mat-label>Postal Code</mat-label>
           <input matInput placeholder="Postal code" formControlName="postalCode" required>
           <mat-error *ngIf="form.get('postalCode')?.hasError('required')">vValid postal code is required</mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
   
-  
-        <button mat-raised-button type="submit">Registor Now</button>
+        <div class="login">
+          <button mat-raised-button type="button" (click)="login('Member')">Member Login</button>
+          <button mat-raised-button type="button" (click)="login('Offical')">Official Login</button>
+        </div> 
+        <button mat-raised-button type="submit">Member Registration</button>
       </form>
     <!-- </fieldset> -->
   </div>
@@ -78,7 +82,7 @@ import { Validators, FormBuilder } from '@angular/forms';
 
   `,
 })
-export class MemberComponent {
+export class MemberComponent implements AfterViewInit {
 
   form = this.fb.group({
     firstName: ['', [Validators.required]],
@@ -91,16 +95,29 @@ export class MemberComponent {
     postalCode: ['', [Validators.required, Validators.pattern(/^[0-9]{4}$/)]],
   });
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private route: Router) {
     
   }
 
+  ngAfterViewInit() {
+    // this.route.navigateByUrl('https://google.com')
+    
+  } 
+
   onSubmit() {
+    window.open('https://africanpeoplefirst.org/customer/create', '_blank');
     if (this.form.valid) {
       console.log(this.form.value);
     } else {
       // Handle invalid form
     }
+  }
+
+  login(userType: string) {
+    if(userType == 'Member')
+      window.open('https://africanpeoplefirst.org/account/login', '_blank');
+    else
+      window.open('https://africanpeoplefirst.org/account/merchantlogin', '_blank');
   }
 
 }

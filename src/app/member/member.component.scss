@@ -78,3 +78,23 @@ form {
     margin: auto;
     margin-bottom: 6rem;
 }
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-column: 1/-1;
+    & button {
+        
+        &:first-child {
+            color: black;
+            background-color: $yellow-200;
+            grid-column: 1;
+        }
+        &:last-child {
+            background-color: $black-200;
+            grid-column: 2;
+        }
+    }
+}
+
