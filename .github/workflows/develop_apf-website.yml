@@ -58,4 +58,4 @@ jobs:
           app-name: 'APF-website'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0BAF46A19CD14ECCB09CCB25A152C083 }}
-          package: ./node-app
+          package: ./node-app/deploy-artifact
