@@ -24,13 +24,19 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
+          npm run build:prod:dist --if-present
 
-      - name: Upload artifact for deployment job
+      - name: Prepare deployment artifact
+        run: |
+          mkdir deploy-artifact
+          cp -r ./dist/APF-Party deploy-artifact/
+          cp ./src/web.config deploy-artifact/
+          
+      - name: Upload deployment artifact
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./deploy-artifact
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +58,4 @@ jobs:
           app-name: 'APF-website'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0BAF46A19CD14ECCB09CCB25A152C083 }}
-          package: .
+          package: ./node-app
