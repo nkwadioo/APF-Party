@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir deploy-artifact
           cp -r ./dist/APF-Party deploy-artifact/
-          cp -r web.config deploy-artifact/
+          cp -r web.config deploy-artifact/APF-Party
           
       - name: Upload deployment artifact
         uses: actions/upload-artifact@v2
@@ -61,4 +61,4 @@ jobs:
           app-name: 'APF-website'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0BAF46A19CD14ECCB09CCB25A152C083 }}
-          package: ./node-app/deploy-artifact
+          package: ./APF-Party
