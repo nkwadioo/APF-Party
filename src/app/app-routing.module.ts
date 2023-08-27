@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'structure', component: StructureComponent },
   { path: 'membership', component: MemberComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
