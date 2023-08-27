@@ -6,5 +6,9 @@
         }
     ],
     "appService.defaultWebAppToDeploy": "/subscriptions/15edcebd-a5df-4e21-bb69-74c6fbb2a3cc/resourceGroups/africanfirstpeople-RG/providers/Microsoft.Web/sites/APF-website",
-    "appService.deploySubpath": "dist"
+    "appService.deploySubpath": "dist",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
 }
