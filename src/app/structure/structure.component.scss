@@ -55,6 +55,7 @@ h3 {
 .swiper-slide img {
     display: block;
     height: 425px;
+    object-fit: contain;
 }
 
 .swiper .info {
