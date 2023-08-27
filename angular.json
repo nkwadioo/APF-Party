@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/APF-Party",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+                            "src/styles.scss"
             ],
             "scripts": []
           },
@@ -94,8 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+                            "src/styles.scss"
             ],
             "scripts": []
           }

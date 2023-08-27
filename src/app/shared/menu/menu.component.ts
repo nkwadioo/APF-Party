@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     <section>
       <img src="/assets/images/logo.jpg" alt="" />
       <nav>
-        <a *ngFor="let item of menuItems" (click)="onSelect(item)" [routerLink]="item.route"
+        <a *ngFor="let item of menuItems" (click)="onSelect(item)" [routerLink]="item.route" [href]="item.url ?? item.route"
           [class.active]="isActive(item.route)">
           {{item.title}}
         </a>
@@ -23,7 +23,7 @@ export class MenuComponent {
     { title: 'Home', route: '/home' },
     { title: 'About Us', route: '/about-us' },
     { title: 'Structure', route: '/structure' },
-    { title: 'Become A Membership', route: '/membership' },
+    { title: 'Become A Membership', route: '/membership', url: 'https://www.google.com' },
     { title: 'Contact Us', route: '/contact-us' },
     // add other menu items here
   ];
@@ -44,5 +44,6 @@ export class MenuComponent {
 
 interface MenuItem {
   title: string,
-  route: string
+  route: string,
+  url?: string
 }
