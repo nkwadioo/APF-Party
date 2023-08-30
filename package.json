@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npx ng serve",
+    "start": "npx ng serve --port=8080",
     "build": "ng build",
     "build:docs": "ng build --base-href /AFP-Party/",
     "build:dist": "ng build --base-href ./",
