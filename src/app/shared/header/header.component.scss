@@ -13,9 +13,10 @@ header {
     position: relative;
     z-index: -1;
     
-    span {
+    .title {
         display: inline-block;
         position: relative;
+        z-index: 1;
         &::after {
             @include underline(0%, $red-200, 10px, $size-xs);
         }

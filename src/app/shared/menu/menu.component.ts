@@ -13,6 +13,11 @@ import { Router, ActivatedRoute } from '@angular/router';
           {{item.title}}
         </a>
       </nav>
+      <div class="menu">
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+      </div>
     </section>
   `,
 })

@@ -35,12 +35,13 @@ img {
   
   .img {
     display: block;
-    object-fit: contain;
     object-position: bottom center;
   }
 
 .captions {
     position: absolute;
+    font-size: $size-m;
+    font-weight: $fw-semiBold;
 
     &.right {
         right: $size-xs;
@@ -58,11 +59,6 @@ img {
         bottom: 0;
     }
 
-    &.mega {
-        font-size: $size-m;
-        font-weight: $fw-semiBold;
-    }
-
     &.midium {
         font-size: $size-md;
         font-weight: $fw-semiBold;
@@ -75,10 +71,11 @@ img {
 
 
     // Caption text styles
-    & > div{
+    & > .caption{
         width: fit-content;
         padding: $size-xs;
     }
+    
     &.striped div:first-child {
         background-color: transparentize($red-200, 0.20);
     }
@@ -112,3 +109,24 @@ img {
         width: $size-sm;
     }
 }
+
+// @media (max-width:  $screen-md) {
+    // }
+
+// @include devices(tablet) {
+//     .captions{
+//         font-size: $size-xxl;
+//     }    
+// }
+
+// @include devices(fold-open) {
+//     .captions{
+//         font-size: $size-xl;
+//     }    
+// }
+
+// @include devices(mobile) {
+//     .captions{
+//         font-size: $size-md;
+//     }
+// }

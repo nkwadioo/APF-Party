@@ -54,7 +54,7 @@ h3 {
 
 .swiper-slide img {
     display: block;
-    height: 425px;
+    // height: 425px;
     object-fit: contain;
 }
 
@@ -76,6 +76,20 @@ h3 {
 
     .name {
         color: $black-100;
+    }
+}
+
+@include devices(fold-open) {
+    h3 {
+        &:first-child {
+            margin-top: unset;
+        }
+    }
+}
+
+@include devices(mobile) {
+    .swiper .swiper-slide {
+        gap: 1.5rem;
     }
 }
   

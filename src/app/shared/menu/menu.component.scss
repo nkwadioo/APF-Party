@@ -22,6 +22,27 @@ nav {
     display: flex;
     gap: 1rem;
     justify-self: center;
+
+    // mobile fist
+
+    display: none;
+}
+
+.menu {
+    width: 50px;
+    justify-self: flex-end;
+    padding: 10px;
+    cursor: pointer;
+
+    .strip {
+        width: 100%;
+        height: 5px;
+        background: white;
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;    
+        }
+    }
+
 }
 
 a {

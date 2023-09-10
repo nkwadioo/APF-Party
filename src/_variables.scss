@@ -1,4 +1,4 @@
-$black-100: #363334;
+$black-100: #706b6c;
 $black-200: #262626;
 $black-300: #201E1F;
 $green-100: #409B31;
@@ -14,13 +14,23 @@ $yellow-300: #FBB52F;
 $ff-body: 'Kanit', sans-serif;
 $ff-enphesis: 'Kameron', serif;
 
-$size-xs: 16px;
-$size-sm: 20px;
-$size-md: 24px;
-$size-lg: 32px;
-$size-xl: 36px;
-$size-xxl: 48px;
-$size-m: 64px;
+:root {
+    --xs: 16px;
+    --sm: 20px;
+    --md: 24px;
+    --lg: 32px;
+    --xl: 36px;
+    --xxl: 48px;
+    --m: 64px;
+}
+
+$size-xs: var(--xs);
+$size-sm: var(--sm);
+$size-md: var(--md);
+$size-lg: var(--lg);
+$size-xl: var(--xl);
+$size-xxl: var(--xxl);
+$size-m: var(--m);
 
 $fw-light: 300;
 $fw-reguler: 400;
@@ -84,7 +94,7 @@ $fw-bold: 700;
     right: $spacers;
     height: $height;
     background-color: $color;
-    bottom: -$gap;
+    bottom: -5px;
 }
 
 @mixin heading-decoration {
@@ -100,3 +110,25 @@ $fw-bold: 700;
         top: 22px;
     }
 }
+
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+  
+  @if $breakpoint == tablet {    
+    @media only screen and (max-width: 880px) {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == fold-open {    
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
+}
+

@@ -79,3 +79,15 @@ main {
     }
 }
 
+@include devices(fold-open) {
+    .post {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include devices(mobile) {
+    .heading::after {
+        height: 5px;
+    }
+}
