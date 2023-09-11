@@ -58,4 +58,4 @@ jobs:
           app-name: 'APF-website'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_733E38B9DDB344E5A4D305F9EF654B79 }}
-          package: .
+          package: ./APF-Party
