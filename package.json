@@ -9,8 +9,7 @@
     "build:dist": "ng build --base-href ./",
     "build:prod:dist": "ng build --configuration production --base-href ./",
     "build:github-pages": "ng build --configuration production --output-path docs --base-href https://nkwadioo.github.io/AFP-Party/",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {
