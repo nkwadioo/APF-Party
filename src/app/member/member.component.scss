@@ -98,3 +98,18 @@ form {
     }
 }
 
+@include devices(tablet) {
+    section {
+        flex-direction: column;
+        gap: 1rem
+    }
+
+    video {width:  100%;}
+}
+
+@include devices(mobile) {
+    .login {
+        display: flex;
+        flex-direction: column;
+    }
+}

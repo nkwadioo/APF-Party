@@ -7,13 +7,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   template: `
     <section>
       <img src="/assets/images/logo.jpg" alt="" />
-      <nav>
+      <nav [class.open]="menuIsOpen">
         <a *ngFor="let item of menuItems" (click)="onSelect(item)" [routerLink]="item.route" [href]="item.url ?? item.route"
           [class.active]="isActive(item.route)">
           {{item.title}}
         </a>
       </nav>
-      <div class="menu">
+      <div class="menu" (click)="toggleMenu()">
         <div class="strip"></div>
         <div class="strip"></div>
         <div class="strip"></div>
@@ -23,6 +23,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent {
   @Output() menuSelected = new EventEmitter<MenuItem>();
+
+  menuIsOpen = false;
 
   menuItems: MenuItem[] = [
     { title: 'Home', route: '/home' },
@@ -37,12 +39,17 @@ export class MenuComponent {
 
 
   onSelect(item: MenuItem): void {
+    this.menuIsOpen = false;
     this.menuSelected.emit(item);
   }
 
   isActive(route: string): boolean {
     // Compare the current route with the route you're checking
     return this.router.url === route;
+  }
+
+  toggleMenu() {
+    this.menuIsOpen = !this.menuIsOpen;
   }
 }
 
