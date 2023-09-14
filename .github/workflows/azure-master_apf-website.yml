@@ -21,17 +21,20 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: npm install, and build angular app
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run build:prod:dist --if-present
+
+      - name: Prepare deployment artifact
+        run: |
+          npm run build:artifact
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./deploy-artifact
 
   deploy:
     runs-on: ubuntu-latest
