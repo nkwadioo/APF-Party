@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
             <p *ngFor="let text of post.details.body">{{text}}</p>
           </div>
           <div class="footer" *ngIf="post.details.footer">
-            <button>RSVP</button>
+            <button><a [href]="'tel:+'+post.details.footer.rsvp">RSVP</a></button>
             <span class="number">{{post.details.footer.rsvp}}</span>
           </div>
         </main>

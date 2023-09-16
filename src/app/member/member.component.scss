@@ -98,7 +98,10 @@ form {
     }
 }
 
-@include devices(tablet) {
+@include devices(small-laptop) {
+    h4 {
+        padding-inline: 1rem;
+    }
     section {
         flex-direction: column;
         gap: 1rem
@@ -111,5 +114,9 @@ form {
     .login {
         display: flex;
         flex-direction: column;
+    }
+
+    form {
+        padding: 1rem;
     }
 }

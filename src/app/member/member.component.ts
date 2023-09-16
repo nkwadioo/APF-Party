@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   <app-header [title]="'Membership'"/>
   <section class="header">
     <video width="640" height="360" controls>
-      <source src="/assets/videos.mp4" type="video/mp4">
+      <source src="/assets/video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <h4>

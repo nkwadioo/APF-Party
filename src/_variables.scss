@@ -113,6 +113,12 @@ $fw-bold: 700;
 
 @mixin devices ($breakpoint) { //the name of the mixin is devices
   
+  @if $breakpoint == small-laptop {    
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
   @if $breakpoint == tablet {    
     @media only screen and (max-width: 880px) {
       @content;

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <app-image-slide />
     <section class="join">
       <p>Join us in our mission to create a just, equal, and prosperous nation for all citizens</p>
-      <button>Become A Member</button>
+      <button [routerLink]="['/membership']">Become A Member</button>
     </section>
     <app-posts />
   `,

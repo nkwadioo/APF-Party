@@ -30,9 +30,9 @@ jobs:
         run: |
           npm run build:artifact
 
-      - name: install deployment artifact dependencies
-        run: |
-          npm run install:artifact:dependencies
+      # - name: install deployment artifact dependencies
+      #   run: |
+      #     npm run install:artifact:dependencies
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
