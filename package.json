@@ -5,7 +5,8 @@
     "ng": "ng",
     "serve": "node server/index.js",
     "start": "npx ng serve --port=8080",
-    "build:artifact": "mkdir deploy-artifact && cp -r ./dist/APF-Party deploy-artifact/www && cp ./server/index.js deploy-artifact",
+    "build:artifact": "mkdir deploy-artifact && cp -r ./server/ deploy-artifact &&  cp -r ./dist/APF-Party deploy-artifact/server/www",
+    "install:artifact:dependencies": "cd deploy-artifact/server && npm install",
     "build": "ng build",
     "build:docs": "ng build --base-href /AFP-Party/",
     "build:dist": "ng build --base-href ./",
@@ -16,7 +17,6 @@
   },
   "private": true,
   "dependencies": {
-    "express": "^4.18.2",
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.0",
     "@angular/common": "^16.2.0",
