@@ -113,11 +113,11 @@ img {
 // @media (max-width:  $screen-md) {
     // }
 
-// @include devices(tablet) {
-//     .captions{
-//         font-size: $size-xxl;
-//     }    
-// }
+@include devices(small-laptop) {
+    .img {
+        object-position: top center;
+    }   
+}
 
 // @include devices(fold-open) {
 //     .captions{
