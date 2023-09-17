@@ -120,7 +120,7 @@ $fw-bold: 700;
   }
   
   @if $breakpoint == tablet {    
-    @media only screen and (max-width: 880px) {
+    @media only screen and (max-width: 1000px) {
       @content;
     }
   }

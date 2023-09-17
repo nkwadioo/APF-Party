@@ -1,18 +1,18 @@
 {
   "name": "apf-party",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "ng": "ng",
     "serve": "node server/index.js",
-    "start": "npx ng serve --port=8080",
-    "build:artifact": "mkdir deploy-artifact && cp -r ./server/ deploy-artifact &&  cp -r ./dist/APF-Party deploy-artifact/server/www",
-    "install:artifact:dependencies": "cd deploy-artifact/server && npm install",
+    "start": "ng serve",
     "build": "ng build",
     "build:docs": "ng build --base-href /AFP-Party/",
     "build:dist": "ng build --base-href ./",
-    "build:prod:dist": "ng build --configuration production --base-href ./",
     "build:github-pages": "ng build --configuration production --output-path docs --base-href https://nkwadioo.github.io/AFP-Party/",
     "watch": "ng build --watch --configuration development",
+    "build:prod:dist": "ng build --configuration production --base-href ./",
+    "build:artifact": "mkdir deploy-artifact && cp -r ./server/ deploy-artifact &&  cp -r ./dist/APF-Party deploy-artifact/server/www",
+    "install:artifact:dependencies": "cd deploy-artifact/server && npm install",
     "test": "ng test"
   },
   "private": true,

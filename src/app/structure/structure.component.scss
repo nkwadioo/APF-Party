@@ -79,6 +79,19 @@ h3 {
     }
 }
 
+button {
+    color: black;
+    background-color: $yellow-200;
+    margin-left: auto;
+    z-index: 1;
+    margin-right: 1rem;
+
+    a {
+        text-decoration: unset;
+        color: inherit;
+    }
+}
+
 @include devices(fold-open) {
     h3 {
         &:first-child {

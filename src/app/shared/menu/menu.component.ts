@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     <section>
       <img src="/assets/images/logo.jpg" alt="" />
       <nav [class.open]="menuIsOpen">
-        <a *ngFor="let item of menuItems" (click)="onSelect(item)" [routerLink]="item.route" [href]="item.url ?? item.route"
+        <a *ngFor="let item of menuItems" (click)="onSelect(item)" [href]="item.url ?? item.route" [attr.target]="item.url ? '_blank' : null"
           [class.active]="isActive(item.route)">
           {{item.title}}
         </a>
@@ -28,9 +28,12 @@ export class MenuComponent {
 
   menuItems: MenuItem[] = [
     { title: 'Home', route: '/home' },
+    { title: 'Galary', url: 'https://www.facebook.com//profile.php?id=100063993092314&sk=photos_by' },
     { title: 'About Us', route: '/about-us' },
     { title: 'Structure', route: '/structure' },
-    { title: 'Become A Membership', route: '/membership', url: 'https://www.google.com' },
+    { title: 'Library', url: 'https://drive.google.com/drive/folders/1vHrxkoC0CBf0yyliUiUIAkPhlptfKpby?usp=sharing' },
+    { title: 'News', url: 'https://www.youtube.com/playlist?list=PLFao7d5wDUobfE9IczlZtwKyIJKQkN7dm' },
+    { title: 'Become A Membership', route: '/membership'},
     { title: 'Contact Us', route: '/contact-us' },
     // add other menu items here
   ];
@@ -43,7 +46,7 @@ export class MenuComponent {
     this.menuSelected.emit(item);
   }
 
-  isActive(route: string): boolean {
+  isActive(route: string | undefined): boolean {
     // Compare the current route with the route you're checking
     return this.router.url === route;
   }
@@ -55,7 +58,7 @@ export class MenuComponent {
 
 
 interface MenuItem {
-  title: string,
-  route: string,
+  title: string;
+  route?: string;
   url?: string
 }

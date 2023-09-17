@@ -69,6 +69,19 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+button {
+  font-size: $size-sm;
+  font-weight: $fw-semiBold;
+  padding: .8rem;
+  margin-top: $size-xs;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 
 
 @include devices(tablet) {

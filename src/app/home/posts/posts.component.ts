@@ -40,7 +40,7 @@ export class PostsComponent {
           `In the spirit of unity, justice, and equality, African People First invites you to join us in paying tribute to the women who inspire us every day. Together, we'll embrace the rich cultural tapestry that women have woven throughout our history and look to a future where every woman's voice is heard, respected, and empowered.`
         ],
         footer: {
-          rsvp: '0745869852'
+          rsvp: '0842848400'
         }
       }
     },
@@ -60,7 +60,7 @@ export class PostsComponent {
           `Your insights, passion, and dedication are essential to our collective journey towards a South Africa that honors the rights, dignity, and potential of every citizen.`
         ],
         footer: {
-          rsvp: '0745869852'
+          rsvp: '0846615287'
         }
       }
     },
