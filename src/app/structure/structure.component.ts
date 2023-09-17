@@ -6,7 +6,7 @@ import { Swiper } from 'swiper';
   styleUrls: ['./structure.component.scss'],
   template: `
     <app-header title="Structure">
-      <button><a href="/assets/APF constitution.pdf" target="_blank">constitution.pdf</a></button>
+      <a href="/assets/APF constitution.pdf" target="_blank"><button>constitution.pdf</button></a>
     </app-header>
 
     <div class="container">

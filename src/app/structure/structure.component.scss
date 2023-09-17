@@ -1,6 +1,9 @@
 @import 'src/variables';
 @import "swiper/css/bundle";
 
+app-header {
+    position: relative;
+}
 
 .container {
     padding-inline: 2rem;
@@ -82,14 +85,17 @@ h3 {
 button {
     color: black;
     background-color: $yellow-200;
-    margin-left: auto;
-    z-index: 1;
-    margin-right: 1rem;
+    
+}
+a {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    text-decoration: unset;
+    color: inherit;
 
-    a {
-        text-decoration: unset;
-        color: inherit;
-    }
 }
 
 @include devices(fold-open) {

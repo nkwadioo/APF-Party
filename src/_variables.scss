@@ -107,7 +107,8 @@ $fw-bold: 700;
         height: 10px;
         background-color: $red-300;
         left: 0;
-        top: 22px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 

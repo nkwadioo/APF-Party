@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
     <header>
       <span class="title">{{title}}</span>
       <img src="/assets/images/strips.png" alt="">
-      <ng-content></ng-content>
     </header>
+    <ng-content></ng-content>
   `,
 })
 export class HeaderComponent {
