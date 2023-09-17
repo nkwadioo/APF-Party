@@ -33,7 +33,7 @@ export class MenuComponent {
     { title: 'Structure', route: '/structure' },
     { title: 'Library', url: 'https://drive.google.com/drive/folders/1vHrxkoC0CBf0yyliUiUIAkPhlptfKpby?usp=sharing' },
     { title: 'News', url: 'https://www.youtube.com/playlist?list=PLFao7d5wDUobfE9IczlZtwKyIJKQkN7dm' },
-    { title: 'Become A Membership', route: '/membership'},
+    { title: 'Become A Member', route: '/membership'},
     { title: 'Contact Us', route: '/contact-us' },
     // add other menu items here
   ];
