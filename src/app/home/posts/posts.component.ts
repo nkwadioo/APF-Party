@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
             <p *ngFor="let text of post.details.body">{{text}}</p>
           </div>
           <div class="footer" *ngIf="post.details.footer">
-            <button><a [href]="'tel:+'+post.details.footer.rsvp">RSVP</a></button>
+            <button><a [href]="'tel:'+post.details.footer.rsvp">RSVP</a></button>
             <span class="number">{{post.details.footer.rsvp}}</span>
           </div>
         </main>
@@ -40,7 +40,7 @@ export class PostsComponent {
           `In the spirit of unity, justice, and equality, African People First invites you to join us in paying tribute to the women who inspire us every day. Together, we'll embrace the rich cultural tapestry that women have woven throughout our history and look to a future where every woman's voice is heard, respected, and empowered.`
         ],
         footer: {
-          rsvp: '0842848400'
+          rsvp: '+27842848400'
         }
       }
     },
@@ -60,7 +60,7 @@ export class PostsComponent {
           `Your insights, passion, and dedication are essential to our collective journey towards a South Africa that honors the rights, dignity, and potential of every citizen.`
         ],
         footer: {
-          rsvp: '0846615287'
+          rsvp: '+27846615287'
         }
       }
     },
