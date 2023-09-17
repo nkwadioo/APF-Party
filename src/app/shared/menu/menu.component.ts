@@ -28,7 +28,7 @@ export class MenuComponent {
 
   menuItems: MenuItem[] = [
     { title: 'Home', route: '/home' },
-    { title: 'Galary', url: 'https://www.facebook.com//profile.php?id=100063993092314&sk=photos_by' },
+    { title: 'Gallery', url: 'https://www.facebook.com//profile.php?id=100063993092314&sk=photos_by' },
     { title: 'About Us', route: '/about-us' },
     { title: 'Structure', route: '/structure' },
     { title: 'Library', url: 'https://drive.google.com/drive/folders/1vHrxkoC0CBf0yyliUiUIAkPhlptfKpby?usp=sharing' },
