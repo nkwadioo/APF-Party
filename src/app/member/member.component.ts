@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
       Your browser does not support the video tag.
     </video>
     <h4>
-    Join African People First (APF) - <em>Become Part of Change. Become</em> <span>a member of the APF and join a movement committed to putting Africans first. Embrace the ideology of New Africanism and be part of an organization that stands for unity, empowerment, equality, and prosperity.</span>
+    Join African People First (APF) - <em>Become Part of Change. Become</em> <span> a member of the APF and join a movement committed to putting Africans first. Embrace the ideology of New Africanism and be part of an organization that stands for unity, empowerment, equality, and prosperity.</span>
     </h4>
   </section>
   <div class="info">
