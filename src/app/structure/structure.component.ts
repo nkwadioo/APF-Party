@@ -131,7 +131,7 @@ export class StructureComponent implements AfterViewInit  {
       image: '/assets/images/structure/1st Deputy Secretary General.png'
     },
     {
-      name: 'Dududu Maganu',
+      name: 'Dududu Magano',
       title: 'Natinal Treasurer',
       image: '/assets/images/structure/National Treasurer - Dududu Maganu.png'
     },
