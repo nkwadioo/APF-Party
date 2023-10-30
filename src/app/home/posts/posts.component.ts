@@ -29,6 +29,23 @@ export class PostsComponent {
   year = new Date().getFullYear();
   posts: Post[] = [
     {
+      image: '/assets/images/posts/08 Nov.jpg',
+      details: {
+        header: {
+          title: 'AFP Consultative Conference',
+          date: '08 November 2022, 09:00 AM'
+        },
+        body: [
+          `📢 BIG NEWS! 📢`,
+          `The time has come for us to gather, deliberate, and plan for a prosperous future! We're thrilled to invite you to the APF Consultative Conference focusing on Election Strategic Planning.`,
+          `Let's unite, share ideas, and pave the way forward. Your voice matters, and we want to hear it! Be part of the change.`
+        ],
+        footer: {
+          rsvp: '+27842848400'
+        }
+      }
+    },
+    {
       image: '/assets/images/posts/09 Aug.png',
       details: {
         header: {
