@@ -34,6 +34,8 @@ main {
     flex-direction: column;
     gap: 2rem;
     align-self: self-end;
+
+    max-width: 72ch;
 }
 
 .title {

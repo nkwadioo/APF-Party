@@ -72,7 +72,7 @@ import { Router } from '@angular/router';
   
         <div class="login">
           <button mat-raised-button type="button" (click)="login('Member')">Member Login</button>
-          <button mat-raised-button type="button" (click)="login('Offical')">Official Login</button>
+          <button mat-raised-button type="button" (click)="login('Official')">Official Login</button>
         </div> 
         <button mat-raised-button type="submit">Member Registration</button>
       </form>
@@ -105,12 +105,12 @@ export class MemberComponent implements AfterViewInit {
   } 
 
   onSubmit() {
-    window.open('https://africanpeoplefirst.org/customer/create', '_blank');
-    if (this.form.valid) {
-      console.log(this.form.value);
-    } else {
-      // Handle invalid form
-    }
+    window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=QrKAVrsNr0OO_iAZiPP6pTLFv8uQ-oFPjYHdsZQWG6FUN0JXUFUwUVpBRTI3TTJMOEhaOTFZSjFCUS4u', '_blank');
+    // if (this.form.valid) {
+    //   console.log(this.form.value);
+    // } else {
+    //   // Handle invalid form
+    // }
   }
 
   login(userType: string) {
